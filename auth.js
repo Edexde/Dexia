@@ -4,7 +4,7 @@ const msalConfig = {
         clientId: '3f2cc8a0-80f3-4865-b2e2-48c5b28914ed',
         // comment out if you use a multi-tenant AAD app
         authority: 'https://login.microsoftonline.com/582d4795-5226-44f7-bfed-0660f4f2a320',
-        redirectUri: 'http://localhost:8080'
+        redirectUri: 'https://edexde.github.io/Dexia/'
     }
 };
 const msalRequest = { scopes: [] };
