@@ -1,0 +1,153 @@
+@import "main.css";
+@import "upcoming.css";
+@import "my_teams.css";
+@import "TO-DO.css";
+
+
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+background: rgba(240, 240, 240, 0.521); 
+border-radius: 8px;
+}
+
+body{
+
+background-image: url("images/william-bout-RPzWI0rolS8-unsplash.jpg");
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-repeat: no-repeat; 
+background-attachment: fixed;
+align-items: center;
+justify-content: center;
+font-family: 'Myriad Pro Light';
+/*overflow: hidden;*/
+
+}
+
+
+#sign_in_panel{
+color: black;
+width: 335px;
+height: 365px;
+background: rgba(223, 223, 223, 0.27);
+position: absolute;
+left: 50%;
+top: 50%;
+margin-left: -167.5px;
+margin-top: -182.5px;
+border-radius: 8px;
+align-items: center;
+justify-content: center;
+z-index: 2;
+box-shadow: 1.5px 1.5px 4px rgba(12, 12, 12, 0.45);
+}
+
+
+/*<img id="Logo" src="images/Dexia sample.png" alt="">*/
+
+
+#sign_msg{
+
+width: 340px;
+height: 80px;
+margin: 0 auto;
+display: flex;
+
+}
+
+#msg{
+font-size: 18px;
+font-family: 'Myriad Pro Regular';
+margin-top: 50px;
+margin-left: 20px;
+
+}
+
+#icon_sign{
+width: 45px;
+height: 45px;
+margin-top: 46px;
+margin-left: 35px;
+display: block;
+}
+
+#logo_container{
+
+width: 182px;
+height: 170px;
+margin: 0 auto;
+padding: 10px;
+position: relative;
+
+}
+
+#Logo{
+
+    width: 60%;
+    margin: auto;
+    display: block;
+    margin-top: 35px;
+}
+
+#sign_in{
+width: 340px;
+height: 80px;
+margin: 0 auto;
+
+}
+
+button{
+background-color: white;
+border-radius: 8px;
+font-size: 18px;
+border-width: 0;
+border-color: gray;
+
+}
+
+
+
+#Sign_in_btn{
+width: 270px;
+height: 50px;
+margin: 0 auto;
+margin-top: 20px;
+margin-left: 32.5px;
+font-family: 'Myriad Pro Regular';
+}
+
+#Sign_in_btn:active{
+
+border-width: 1px;
+
+
+
+}
+
+
+
+#supported_container{
+
+position: absolute;
+left: 55%;
+top: 80%;
+margin-left: -167.5px;
+display: flex;
+font-family: 'Myriad Pro Regular';
+
+}
+
+
+#supported_1{
+margin-top: 18px;
+width: 80px; /* 0.135*/
+height: 13.2px;
+margin-left: 10px;
+}
+

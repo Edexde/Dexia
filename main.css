@@ -1,0 +1,259 @@
+body{
+
+    background-image: url("images/Background.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+#DisplayUI{
+
+color: black;
+height: 100vh;
+
+overflow-y: hidden;
+display: grid;
+grid-template-columns: 2fr 4fr 1.6fr ;
+grid-gap: 2px;
+        
+}
+
+
+/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
+
+#container_one{
+
+display: grid;
+grid-template-rows: 10vh 80vh 10vh;
+
+
+}
+
+#section_1{
+
+display: flex;
+justify-content: left; 
+}
+
+#hamburger_menu{
+width: 30px;
+height: 25px;
+margin-top: 15px;
+margin-right: 40px;
+margin-left: 20px;
+    
+}
+
+#section_2{
+
+display: flex;
+align-items: center;
+justify-content: center;   
+    
+}
+
+#Panel_1{
+
+width: 95%;
+height: 100%;
+background-color:rgba(58, 58, 58, 0.26);
+border-radius: 8px;
+position:relative;
+box-shadow: 1.5px 1.5px 4px rgba(12, 12, 12, 0.45);
+background: rgba(167, 167, 167, 0.27);
+background: rgba(235, 235, 235, 0.27);
+
+}
+
+
+
+/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
+#container_two {
+
+display: grid;
+grid-template-rows: 6vh 88vh 6vh;
+}
+
+
+    
+#section_5{
+
+display: flex;
+align-items: center;
+justify-content: center;   
+position: relative;  
+}
+
+
+#Panel_2{
+
+width: 95%;
+height: 100%;
+background-color:rgba(58, 58, 58, 0.26);
+border-radius: 8px;
+box-shadow: 1.5px 1.5px 4px rgba(12, 12, 12, 0.45);
+background: rgba(235, 235, 235, 0.27);
+position: relative;
+
+
+
+
+    
+}
+    
+
+/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
+
+
+#container_three {
+
+display: grid;
+grid-template-rows: 0.01fr 1fr 1fr 5fr 1.5fr;
+grid-template-rows: 0vh 10vh 13vh 65vh 12vh;
+
+}
+
+#section_7 {
+
+display: flex;
+
+padding-left: 0;
+}
+
+#profile_id{
+
+padding-bottom: 24px;
+padding-left: 4px;
+width: 180px;
+font-size: medium;
+
+
+
+
+
+
+
+}
+    
+#name{
+color: rgb(255, 255, 255);
+font-family: 'Myriad Pro Regular';
+font-size: 25px;
+margin-top: 10px;
+margin-right: 8px;
+text-decoration: none;
+float:right;
+        
+}
+    
+#id_{
+color: rgb(255, 255, 255);
+font-family: 'Myriad Pro Regular';
+font-size: 10px;
+margin-top: 2px;
+margin-left: 25px;
+text-decoration: none;
+
+
+    
+        
+}
+    
+#profile_img {
+       
+width: 70px;
+height: 70px;
+border-radius: 50%;
+border-color:rgb(255, 255, 255);
+border-width: 48px;
+margin-right: 15px;
+
+
+}
+
+#section_8 {
+
+display: flex;
+align-items: center;
+justify-content: right;
+
+}
+
+#notif_bell{
+width: 45px;
+height: 45px;
+margin-top: 10px;
+margin-right: 40px;
+
+}
+
+
+
+#section_9 {
+
+align-items: center;
+justify-content: center;
+display: flex;
+}
+
+
+
+
+/*Panel design########################################*/
+
+.top_menu{
+
+
+width: 100%;
+height: 10%;
+align-items: center ;
+display: flex;
+text-align: center;
+box-sizing: border-box;
+align-items: center;
+justify-content: center;
+
+
+}
+
+.top_menu a{
+color: rgb(255, 255, 255);
+padding: 7.5%;
+margin-top: 12px;
+font-family: 'Myriad Pro Light';
+font-size: 18px;
+text-decoration: none;
+
+
+
+
+}
+
+.animation_bar{
+
+width: 100%;
+height: 2px;
+
+background-color:rgba(255, 255, 255, 0.27);
+display: flex;
+align-items: center;
+
+
+
+}
+
+.slide_h{
+margin-left: 28px;
+width: 22%;
+height: 100%;
+background-color: white;
+border-radius: 10px;
+opacity: 1;
+}
+
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JavaScript Microsoft Graph SPA</title>
+  <link rel="icon" href="data:;base64,="> <!-- Suppress favicon error -->
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="jquery-3.6.0.js"></script>
+</head>
+
+<body>
+  
+  
+    <div id="sign_in_panel">
+        
+        <div id="sign_msg"> 
+            <img id="icon_sign" src="images/log_in_icon.png" alt="">
+            <p id="msg"> Sign in with <br>your Organization account</p>    
+        </div>
+        
+        <div id="logo_container"><img id="Logo" src="images/Dexia sample.png" alt=""></div>
+        <div id="sign_in"> <button id="Sign_in_btn" onclick="displayUI()"> sign in</button> </div>
+
+
+    </div>
+
+    <div id="supported_container">
+        <p>Account supported </p>
+        <img id="supported_1" src="images/800px-Microsoft_365_logo.png" alt="" >
+    </div>
+    
+   
+   
+   
+    <div id="DisplayUI" style="display: none;">
+        
+        <div id="container_one">
+            <div id="section_1">
+                <img id="hamburger_menu" src="images/hamburger_menu.png" alt="">
+            </div>
+            <div id="section_2">
+                <div id="Panel_1">
+                  
+                    <nav class="top_menu">
+                        <a href="">My teams</a>
+                        <a href="">My network</a>
+                   </nav> 
+                   <div class="animation_bar">
+                        <div class="slide_h"></div>
+                    </div>
+                    
+
+                    <div id="contain_3" >
+                        <div class="t1" style="display:none ;"> 
+                            <img class="Team_photo"></img>
+                            <div class="team_name_box">
+                                <p class="team_name"> Sales</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                   <div id="online_section_header" style="display:none"> 
+                        <button class="return_btn" onclick="return_panel()"> &#8592 </button>
+                        <p>Online participant </p>
+                   </div>
+                    <div id="contain_3_participant" style="display:none">
+                        
+                        <div class="participant" style="display:none;">
+                            <img class="participant_image" src="images/d7x2Go7W_400x400.jpg" alt="">
+                            <div class="dot"></div>
+                            <div class="participant_name_box">
+                                <p class="participant_name">Dexde</p>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div id="other_member" style="display:none"> 
+                        <p>Other Members </p>
+                        <img class="down_arrow" src="/images/down_arrow.png" alt="">
+                        
+                    </div>
+
+                </div>
+            </div>
+            <div id="section_3"></div>
+        </div>
+        
+        
+        
+        
+        
+        <div id="container_two">
+            <div id="section_4"></div>
+            
+            <div id="section_5">
+                <div id="Panel_2">
+                    <nav class="top_menu">
+                        <a href="#">Overview</a>
+                        <a href="#">Upcoming</a>
+                        <a href="#">Files</a>
+                        <a href="#">Mail</a>
+                
+                    </nav>
+                    <div class="animation_bar">
+                        <div class="slide_h"></div>
+                        <div class="active"></div>
+                        <div class="active"></div>
+                        <div class="active"></div>
+                    </div>
+                    
+                    <div id="contain_2">
+                       <div class="upcoming_header">Today</div>
+                       <nav class="upcoming_meeting"  style="display: none;">
+                            <div class="meeting_label" style="display:none "></div>
+                            <img class="meet_1" src="images/default_profile.jpg" alt="" style="display:none ">
+                            <div class="meet_1_contain" style="display:none ">
+                                <p class="event_name" style="display:none ">Meeting with Sales</p>
+                                <p class="event_type"> Tasks</p>
+                                <div class="event_description"  style="display:none ">
+                                    <p class="start_metric"> Start : </p>
+                                    <p class="start_data"> 10h00</p>
+                                    <p class="Duration_metric"> Duration : </p>
+                                    <p class="Duration_data"> 30 mn</p>
+                                    <p class="channel_metric" > Location : </p>
+                                    <p class="channel_data"> Sales</p>
+
+                                </div>
+
+                                <div class="more_members" style="display:none ">
+                                    <img class="more_mem_img" src="images/Screenshot_20221111_094713.png" alt="" style="display:none ">
+                                   
+                                </div>
+                            </div>
+
+                            <div class="meeting_label" style="display: none"></div> 
+                            <div class="icon_background" style="display: none">
+                                <img class="meet_2" src="images/file_icon.png"  alt="">
+                            </div>
+                            <div class="meet_2_contain" style="display: none;">
+                                <p class="event_name">Meeting with Sales</p>
+                                <p class="event_type"> Tasks</p>
+                                <div class="event_description" >
+                                    <p class="start_metric"> Start : </p>
+                                    <p class="start_data"> 10h00</p>
+                                    <p class="Duration_metric"> Duration : </p>
+                                    <p class="Duration_data"> 30 mn</p>
+                                    <p class="channel_metric" > Location : </p>
+                                    <p class="channel_data"> Sales</p>
+
+                                </div>
+
+                                <div class="more_members" >
+                                    <img class="more_mem_img" src="images/Screenshot_20221111_094713.png" alt="" style="display: none">
+                                   
+                                </div>
+                            </div>
+
+                       </nav>
+
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div id="section_6"></div>
+        </div>
+        
+        
+        
+        
+        <div id="container_three">
+            
+            <div id="section_"></div>
+            
+            <div id="section_7"> 
+                <div id="profile_id">
+                    <a id="name" href="">Jasmine Dupont</a>
+                    <a id="id_" href="">JasmineDupont@Organization.com</a>
+                </div>
+                <img id="profile_img" src="images/default_profile.jpg" alt="">
+
+            </div>
+            
+            <div id="section_8">
+                <img id="notif_bell" src="images/notif_bell.png" alt="">
+
+            </div>
+            <div id="section_9">
+                <div id="Panel_3">
+
+                    <div class="top_menu" > </div>
+                    <div id="panel3_Box">  
+                        <div id="to_do_board">
+                            <div class="task" style="display: none;">
+                                
+                                <div class="circle_state" >
+                                    <img src="images/chek.png" alt="" class="check">
+                                </div>
+                                <div class="to-do_section">
+                                    <p class="to_do_tasks">Today we will try to improve our curiosity </p>
+                                    <h2 class="to_do_class"> Meeting</h2>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="add_tasks_section" >
+                            <div class="Add_tasks" onclick=" makeInput()"> 
+                                <p>+  Add a task</p>
+                            </div>    
+                        </div>
+
+                    </div>      
+
+                </div>
+
+            </div>
+            <div id="section_10"></div>
+        </div>
+        
+        
+    </div>
+
+
+
+
+
+
+
+
+
+  <script src="https://alcdn.msauth.net/browser/2.1.0/js/msal-browser.min.js"
+    integrity="sha384-EmYPwkfj+VVmL1brMS1h6jUztl4QMS8Qq8xlZNgIT/luzg7MAzDVrRa2JxbNmk/e"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@microsoft/microsoft-graph-client/lib/graph-js-sdk.js"></script>
+  <script src="auth.js"></script>
+  <script src="graph.js"></script>
+  <script src="ui.js"></script>
+  <script src="Event.js"></script>
+</body>
+</html>

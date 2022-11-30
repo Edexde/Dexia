@@ -1,0 +1,177 @@
+
+#contain_2{
+width: 100%;
+height: 90%;
+
+display:block;
+overflow-y:auto;
+overflow-x:hidden;
+position: relative;
+overscroll-behavior-block: contain;
+
+
+
+}
+    
+.upcoming_header{
+
+width: 100%;
+height: 14%;
+color: white;
+font-size: 26px;
+line-height: 20px;
+display: flex;
+align-items: center;
+padding-left: 24px;
+
+}
+
+.upcoming_meeting{
+    background-color: rgba(116, 109, 109, 0.096);
+    width: 99%;
+    height: 21%;
+    color: white;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px 2px 2px 5px;
+    box-shadow: 0.4px 0.5px 2px rgba(75, 72, 72, 0.541);
+    margin-top: 6px;
+    background-color: rgba(179, 190, 197, 0.301);
+    
+    
+}
+
+.upcoming_meeting:hover{
+
+/*background-color: rgba(92, 92, 92, 0.233);*/
+
+box-shadow: 0.6px 0.8px 4px rgba(43, 42, 42, 0.541);
+
+
+}
+.meeting_label{
+background-color: rgb(135, 0, 153);
+width: 4%;
+height: 100.2%;
+margin-bottom: 2px;
+border-radius: 5px 0 0 5px ;
+
+
+}
+
+.meet_1{
+width: 70px;
+height: 70px;
+border-radius: 50%;
+border-width: 48px;
+margin-right: 15px;
+margin-left: 24px;
+object-fit: cover;
+
+}
+
+
+
+.event_name{
+font-family: 'Myriad Pro Light';
+font-size: 22px;
+margin-top: 10px;
+margin-bottom: 2px;
+
+
+}
+
+.event_description{
+
+font-size: 14px;
+color: rgb(66, 66, 66);
+display: flex;
+height: 4px;
+align-items: center;
+transform: translate(0,-8px);
+margin-bottom: 10px;
+
+}
+
+.start_metric{
+margin-left: 0;
+}
+    
+.start_data{
+color: white;
+margin-left: 5px;
+
+
+}
+
+.Duration_metric{
+margin-left: 15px;
+
+}
+
+.Duration_data{
+color: white;
+margin-left: 5px;
+
+}
+
+.channel_metric{
+margin-left: 15px;
+
+}
+
+.channel_data{
+color: white;    
+margin-left: 5px;
+
+}
+
+.more_members{
+width: 80%; 
+height: 26px;
+gap: 4px;
+
+        
+}
+    
+.more_mem_img{
+width: 24px; 
+height: 24px;
+border-radius: 50%; 
+object-fit: cover;
+border: 0.5px rgba(255, 255, 255, 0.911) solid;
+margin-top: 0;
+
+               
+}
+
+.icon_background{
+box-shadow: 0.4px 0.5px 2px rgba(75, 72, 72, 0.541);
+background-color: rgba(179, 190, 197, 0.301);
+width: 70px;
+height: 70px;
+border-radius: 8px;
+margin-right: 15px;
+margin-left: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+
+.meet_2{
+width: 32px; 
+height: 40px;
+ 
+
+}
+
+.event_type{
+margin-top: 0;
+font-size: 14px;
+color: rgb(50, 8, 85);
+
+}
