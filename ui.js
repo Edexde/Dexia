@@ -62,24 +62,7 @@ async function display_event_containt(event,start_param,dur_param,loc,id){
     let label=document.createElement("div");
     
     let image = document.createElement("img");
-    const userPhoto = await getUsersPhoto(id);
-    if (!userPhoto) {
-      image.src="images/default_profile.jpg";
-      image.className="meet_1";
-     
-    }
-    else{
-      //convert blob to a local URL
-      const urlObject = URL.createObjectURL(userPhoto);
-      // show user photo
-      const userPhotoElement = image;
-      userPhotoElement.className="meet_1";
-
-      //const userPhotoElement = document.getElementById('profile_img');
-      userPhotoElement.src = urlObject;
-      //var imgPhoto= document.getElementById('profile_img');
-
-    }
+    
     
 
   
@@ -128,8 +111,29 @@ async function display_event_containt(event,start_param,dur_param,loc,id){
     
     add_to.appendChild(upcoming_event);
     upcoming_event.appendChild(label);
+
+
+
+
     upcoming_event.appendChild(image);
     upcoming_event.appendChild(meet_1_contain);
+
+    const userPhoto = await getUsersPhoto(id);
+    if (!userPhoto) {
+      image.src="images/default_profile.jpg";
+      image.className="meet_1";
+     
+    }
+    else{
+      //convert blob to a local URL
+      const urlObject = URL.createObjectURL(userPhoto);
+      // show user photo
+      const userPhotoElement = image;
+      userPhotoElement.className="meet_1";
+      userPhotoElement.src = urlObject;
+  
+
+    }
 
     meet_1_contain.appendChild(event_name);
     meet_1_contain.appendChild(event_type);
@@ -142,7 +146,9 @@ async function display_event_containt(event,start_param,dur_param,loc,id){
 
     event_desc.appendChild(location);
     event_desc.appendChild(location_data);
-   // meet_1_contain.appendChild(more_members);
+
+   
+   
 
 
         
@@ -159,15 +165,15 @@ async function displayEvents() {
 
   } else {
    
-    events.value.forEach(event => {
+    events.value.forEach(async event => {
       
       
       
       let pattern=/[0-9]+:[0-9][0-9]:[0-9][0-9] \w\w/i;
       
-      if(!event.isOnlineMeeting){
+      if(event.isOnlineMeeting == false){
           
-        display_event_task( event.subject,new Date(event.start.dateTime).toLocaleString().match(pattern),new Date(event.end.dateTime).toLocaleString().match(pattern),"");
+       display_event_task( event.subject,new Date(event.start.dateTime).toLocaleString().match(pattern),new Date(event.end.dateTime).toLocaleString().match(pattern),"");
 
       }else if(event.attendees.length > 2 ){ 
        
@@ -177,20 +183,24 @@ async function displayEvents() {
           
         }
         
-        
+       
+         
         display_more_members(event.subject,new Date(event.start.dateTime).toLocaleString().match(pattern),new Date(event.end.dateTime).toLocaleString().match(pattern),event.location.displayName,email);
           
-         // display_event_containt(event.subject,new Date(event.start.dateTime).toLocaleString().match(pattern),"",event.location.displayName,email);
+       
+        
+       
 
     
        
 
       } else{
 
-        s1=new Date(event.start.dateTime).toLocaleString().match(pattern)
-        display_event_containt(event.subject,new Date(event.start.dateTime).toLocaleString().match(pattern),new Date(event.end.dateTime).toLocaleString().match(pattern),event.location.displayName,event.attendees[0].emailAddress.address);
-       // alert(s1);
-
+      
+        
+        
+        await display_event_containt(event.subject,new Date(event.start.dateTime).toLocaleString().match(pattern),new Date(event.end.dateTime).toLocaleString().match(pattern),event.location.displayName,event.attendees[0].emailAddress.address) ;
+        
       }
       
       
@@ -212,8 +222,6 @@ async function displayEvents() {
 async function display_Teams_containt(name,id){
 
 
-  //alert(id);
-  //let container=document.createElement("div");
   var container = document.getElementById('contain_3');
   let team_1=document.createElement("div");
   let image =document.createElement("img");
@@ -242,9 +250,9 @@ async function display_Teams_containt(name,id){
       const userPhotoElement = image;
       userPhotoElement.className="Team_photo";
 
-      //const userPhotoElement = document.getElementById('profile_img');
+     
       userPhotoElement.src = urlObject;
-      //var imgPhoto= document.getElementById('profile_img');
+    
 
     }
 
@@ -284,9 +292,7 @@ async function display_Teams(){
       //id_teams=team.id
       //alert(team.id);
       display_Teams_containt(team.displayName,team.id);
-      //let pattern= /[0-9]+:[0-9][0-9]:[0-9][0-9] \w\w/i;
-      //display_event_containt(event.subject,new Date(event.start.dateTime).toLocaleString().match(pattern),"",event.location.displayName,email);
-      
+    
     });
   }
 
@@ -537,24 +543,6 @@ async function display_more_members(event,start_param,dur_param,loc,id){
   
 
 
-  const userPhoto = await  getUsersPhoto(id[0]);
-  if (!userPhoto) {
-    image.src="images/default_profile.jpg";
-    image.className="meet_1";
-   
-  }
-  else{
-    //convert blob to a local URL
-    const urlObject = URL.createObjectURL(userPhoto);
-    // show user photo
-    const userPhotoElement = image;
-    userPhotoElement.className="meet_1";
-
-    //const userPhotoElement = document.getElementById('profile_img');
-    userPhotoElement.src = urlObject;
-    //var imgPhoto= document.getElementById('profile_img');
-
-  }
   
 
   let meet_1_contain=document.createElement("div");
@@ -605,6 +593,25 @@ async function display_more_members(event,start_param,dur_param,loc,id){
 
   add_to.appendChild(upcoming_event);
   upcoming_event.appendChild(label);
+  
+  const userPhoto = await  getUsersPhoto(id[0]);
+  if (!userPhoto) {
+    image.src="images/default_profile.jpg";
+    image.className="meet_1";
+   
+  }
+  else{
+    //convert blob to a local URL
+    const urlObject = URL.createObjectURL(userPhoto);
+    // show user photo
+    const userPhotoElement = image;
+    userPhotoElement.className="meet_1";
+
+    //const userPhotoElement = document.getElementById('profile_img');
+    userPhotoElement.src = urlObject;
+    //var imgPhoto= document.getElementById('profile_img');
+
+  }
   upcoming_event.appendChild(image);
   upcoming_event.appendChild(meet_1_contain);
 
@@ -662,18 +669,16 @@ async function display_more_members(event,start_param,dur_param,loc,id){
 }
 
 
-function display_event_task(event,start_param,dur_param,loc){
+async function display_event_task(event,start_param,dur_param,loc){
 
 
   var add_to = document.getElementById('contain_2');
   let upcoming_event = document.createElement("div");
   let label=document.createElement("div");
-  let icon_background = document.createElement("dic");
+  let icon_background = document.createElement("div");
   let image = document.createElement("img");
 
-  
-
-
+ 
   
 
   let meet_1_contain=document.createElement("div");
@@ -686,7 +691,7 @@ function display_event_task(event,start_param,dur_param,loc){
   let duration_data=document.createElement("p");
   let location = document.createElement("p");
   let location_data = document.createElement("p");
-  let more_memb = document.createElement("div");
+  
 
 
 
