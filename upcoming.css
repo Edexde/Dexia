@@ -62,37 +62,71 @@ border-radius: 5px 0 0 5px ;
 }
 
 .meet_1{
-width: 70px;
-height: 70px;
+width: 68px;
+height: 68px;
 border-radius: 50%;
 border-width: 48px;
 margin-right: 15px;
-margin-left: 24px;
+margin-left: 16px;
 object-fit: cover;
+z-index: 6;
+border: 5px solid rgba(253, 253, 253, 0.123); 
+
+
+}
+
+.meet_1_group_meeting{
+width: 68px;
+height: 68px;
+border-radius: 50%;
+border-width: 48px;
+margin-right: 15px;
+margin-left: 16px;
+margin-bottom: 0px;
+object-fit: cover;
+z-index: 6;
+border: 5px solid rgba(253, 253, 253, 0.123); 
+
+opacity:0;
+left:20px;
+animation:showNotification 500ms ease-in-out forwards;
+}
+@keyframes showNotification {
+to {
+  opacity:1;
+  left:0px;
+}
 
 }
 
 
 
+.meet_1_contain{
+z-index: 1;
+
+
+}
+
+
 .event_name{
-font-family: 'Myriad Pro Light';
-font-size: 22px;
+font-family: 'Myriad Pro Regular';
+font-size: 24px;
 margin-top: 10px;
-margin-bottom: 2px;
+margin-bottom: 4px;
 
 
 }
 
 .event_description{
 
-font-size: 14px;
+font-size: 12.5px;
 color: rgb(66, 66, 66);
 display: flex;
 height: 4px;
 align-items: center;
 transform: translate(0,-8px);
-margin-bottom: 10px;
-
+margin-bottom: 2px;
+margin-top: 8px;
 }
 
 .start_metric{
@@ -132,8 +166,10 @@ margin-left: 5px;
 width: 80%; 
 height: 26px;
 gap: 4px;
-
-        
+z-index: 4;
+position: relative;
+margin-bottom: 8px;
+left: -10px;
 }
     
 .more_mem_img{
@@ -141,8 +177,10 @@ width: 24px;
 height: 24px;
 border-radius: 50%; 
 object-fit: cover;
-border: 0.5px rgba(255, 255, 255, 0.911) solid;
-margin-top: 0;
+margin-bottom: 10px;
+
+border: 3px solid rgba(253, 253, 253, 0.267); 
+
 
                
 }
@@ -171,7 +209,7 @@ height: 40px;
 
 .event_type{
 margin-top: 0;
-font-size: 14px;
+font-size: 13px;
 color: rgb(50, 8, 85);
-
+margin-bottom: 14px;
 }
