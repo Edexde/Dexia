@@ -3,7 +3,13 @@
 @import "my_teams.css";
 @import "TO-DO.css";
 
+@font-face {
+font-family: "Myriad Pro Regular";
+src: url("/font/Myriad\ Pro\ Regular.ttf");
+src: url("/font/Myriad\ Pro\ Regular.ttf");
+src: url("/font/Myriad\ Pro\ Regular.ttf");
 
+}
 
 ::-webkit-scrollbar {
     width: 3px;
@@ -15,10 +21,10 @@ border-radius: 8px;
 }
 
 @font-face {
-font-family: Myriad Pro;
+font-family: "Myriad Pro Light";
 font-style: normal;
 font-weight: 400;
-src: local("Myriad Pro");
+src: url("/font/MyriadPro-Light.otf");
 }
 
 
